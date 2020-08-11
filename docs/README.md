@@ -43,3 +43,21 @@ To modify the docs, simply create/remove/modify the `README` files in the `docs`
 ### Confidential
 
 Confidential information is documented in the Wiki of the private repository, [`acumany-re-credential`](https://github.com/tianhaoz95/acumany-re-credential).
+
+# Third-party tools
+
+## Continuous integration
+
+* GitHub Actions: GitHub's in-house CI/CD platform. For more details, see the [docs](https://docs.github.com/en/actions).
+
+## Continuous deployment
+
+* Release Drafter: a action to draft releases based on commits to the `master` branch. For details, see the [docs](https://probot.github.io/apps/release-drafter/).
+
+## Code Quality
+
+* Commitlint: a tool to check the format of commmit message. For details, see the [docs](https://github.com/z0al/commitlint-bot).
+
+## Code review
+
+* Semantic Pull Requests: a tool to make sure all pull requests have the required format. For details, see the [docs](https://probot.github.io/apps/semantic-pull-requests/).
