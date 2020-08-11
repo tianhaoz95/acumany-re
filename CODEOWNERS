@@ -1,0 +1,8 @@
+# Global owners
+*                               @tianhaoz95
+
+# Documentation content owners
+README.md                       @tianhaoz95 @ninjatron
+docs/README.md                  @tianhaoz95 @ninjatron
+docs/design-docs/*.md           @tianhaoz95 @ninjatron
+

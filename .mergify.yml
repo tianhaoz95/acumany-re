@@ -1,0 +1,8 @@
+pull_request_rules:
+  - name: Automatic merge design doc changes on approval
+    conditions:
+      - "files=^docs\\/design-docs\\/.*\\.md$"
+      - "#approved-reviews-by>=1"
+    actions:
+      merge:
+        method: merge
