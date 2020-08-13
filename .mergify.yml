@@ -3,6 +3,16 @@ pull_request_rules:
     conditions:
       - -files~=^(!?docs/design-doc/)
       - "#approved-reviews-by>=1"
+      - status-success=WIP
+      - status-success=Semantic Pull Request
     actions:
       merge:
         method: merge
+
+  - name: Automatic approve design doc changes for tianhaoz95
+    conditions:
+      - author=tianhaoz95
+    actions:
+      review:
+        type: APPROVE
+        message: Hi tianhaoz95! Since you are the owner of the repository, your changes in design docs is automatically approved!
