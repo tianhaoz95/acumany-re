@@ -2,5 +2,5 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - init: 'echo "TODO: Replace with init/build command"'
+  - init: ./scripts/bash/initialize_gitpod_workspace.sh
     command: 'echo "TODO: Replace with command to start project"'
