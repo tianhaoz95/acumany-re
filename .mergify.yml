@@ -12,6 +12,7 @@ pull_request_rules:
   - name: Automatic approve design doc changes for tianhaoz95
     conditions:
       - author=tianhaoz95
+      - -files~=^(!?docs/design-doc/)
     actions:
       review:
         type: APPROVE
