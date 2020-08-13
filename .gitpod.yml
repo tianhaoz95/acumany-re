@@ -3,4 +3,4 @@ image:
 
 tasks:
   - init: ./scripts/bash/initialize_gitpod_workspace.sh
-    command: 'echo "TODO: Replace with command to start project"'
+    command: echo Project starting...
