@@ -13,6 +13,10 @@ For now, the tech stack is going through a brainstorm session, see [here](design
   @body After the tech stack is decided, add details here for new developers to get started.
 -->
 
+# Quick references
+
+* [Design Docs](./design-docs/README)
+
 # Getting started
 
 ## App
