@@ -1,0 +1,6 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - init: ./scripts/bash/initialize_gitpod_workspace.sh
+    command: echo Project starting...
