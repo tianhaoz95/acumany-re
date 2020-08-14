@@ -34,6 +34,10 @@
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
   <script>
+    let currentLoc = window.location
+    console.log(`Full path is ${currentLoc}`)
+    let urlElts = currentLoc.toString().split('/').pop().substring(0, 49)
+    console.log(`Current label is ${JSON.stringify(urlElts)}`)
     const gitalk = new Gitalk({
       clientID: '0f2cce701d5204c95409',
       clientSecret: 'ec94a839e18edcc8deaa84b638b02f1943e432bd',
@@ -42,7 +46,7 @@
       admin: ['tianhaoz95'],
       // facebook-like distraction free mode
       distractionFreeMode: false,
-      id: (location.pathname).split("/").pop().substring(0, 49),
+      id: urlElts,
     })
   </script>
   <!-- Configuration for Medium like zoom image -->
