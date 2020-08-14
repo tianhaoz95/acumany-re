@@ -7,16 +7,50 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
+  <!-- For GitTalk plugin -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
 </head>
 <body>
   <div id="app"></div>
+  <!-- Configuration for edit on GitHub button -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-edit-on-github"></script>
+  <!-- Configuration for docsify -->
   <script>
     window.$docsify = {
       name: 'Acumany Re',
       repo: 'https://github.com/tianhaoz95/acumany-re',
       relativePath: true,
+      search: 'auto',
+      plugins: [
+        EditOnGithubPlugin.create(
+          'https://github.com/tianhaoz95/acumany-re/blob/master/docs/',
+          null, 'Edit on GitHub'
+        ),
+      ]
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  <!-- Configuration for GitTalk plugin -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/gitalk.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js"></script>
+  <script>
+    const gitalk = new Gitalk({
+      clientID: '0f2cce701d5204c95409',
+      clientSecret: 'ec94a839e18edcc8deaa84b638b02f1943e432bd',
+      repo: 'acumany-re',
+      owner: 'tianhaoz95',
+      admin: ['tianhaoz95'],
+      // facebook-like distraction free mode
+      distractionFreeMode: false
+    })
+  </script>
+  <!-- Configuration for Medium like zoom image -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+  <!-- Configuration for copy to clipboard -->
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+  <!-- Configuration for search -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <!-- Configuration for emoji support -->
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
 </body>
 </html>
