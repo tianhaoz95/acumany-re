@@ -4,16 +4,35 @@ This design doc is the initial feasibility study to help decide the tech stack t
 
 ## Platform preference
 
-<!--
-  @todo Platform preference
-  @body Decide if we should go with mobile first or web first.
--->
+Among the usecases of the product, casual consulting and office hour can benefit from being avaiable on mobile.
+
+Considering that going from desktop to mobile is harder than going from mobile to desktop in terms of UX design, it is more preferable to initially design as a mobile-first product.
 
 ## Service vendor
 
+As cloud services are getting mature, there are many options, but we want a vendor that is easy to get started and build the initial product without having too much vendor lock-in.
+
+### Candidates
+
+#### Firebase
+
+Firebase is a bundled services based on Google Cloud that includes authentication, database, messaging and app distribution.
+
+#### AWS
+
+AWS is the most powerful cloud service, but it requires more effort setting up the infra which mostly is linking all the components.
+
+#### Azure
+
+Azure is similar to AWS, but cheaper.
+
+#### Google Cloud
+
+Firebase is cheaper than the individual components on Google Cloud and switching is pretty easy, so, for now, not considering the vanilla Google Cloud as an option.
+
 <!--
-  @todo Choose service vendor
-  @body List our needs and avaiable frameworks, and choose the one that fits our needs.
+  @todo Select from the service vendor candidates
+  @body All the options are listed above, choose one that fits the product needs.
 -->
 
 ## App framework
@@ -92,13 +111,6 @@ For the package support we can get from the Flutter ecosystem, see the [docs](./
 <!--
   @todo Deciside which app framework to use
   @body Deciside which app framework aligns better with the UI/UX design and the functionalities.
--->
-
-## Server framework
-
-<!--
-  @todo Choose server framework
-  @body List our needs and avaiable frameworks, and choose the one that fits our needs.
 -->
 
 ## App server interface schema
