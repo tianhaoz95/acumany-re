@@ -14,21 +14,25 @@ As cloud services are getting mature, there are many options, but we want a vend
 
 ### Candidates
 
-#### Firebase
+<!-- tabs:start -->
+
+#### ** Firebase **
 
 Firebase is a bundled services based on Google Cloud that includes authentication, database, messaging and app distribution.
 
-#### AWS
+#### ** AWS **
 
 AWS is the most powerful cloud service, but it requires more effort setting up the infra which mostly is linking all the components.
 
-#### Azure
+#### ** Azure **
 
 Azure is similar to AWS, but cheaper.
 
-#### Google Cloud
+#### ** Google Cloud **
 
 Firebase is cheaper than the individual components on Google Cloud and switching is pretty easy, so, for now, not considering the vanilla Google Cloud as an option.
+
+<!-- tabs:end -->
 
 <!--
   @todo Select from the service vendor candidates
@@ -46,7 +50,9 @@ Firebase is cheaper than the individual components on Google Cloud and switching
 
 ### Candidates
 
-#### React
+<!-- tabs:start -->
+
+#### ** React **
 
 React is a front-end JavaScript framework. For details, see the [docs](https://reactjs.org/).
 
@@ -59,7 +65,7 @@ Disadvantages:
 * Hard to maintain since there is no single correct way of doing things.
 * No support outside web.
 
-#### React Native / Expo
+#### ** React Native / Expo **
 
 React Native = React + Native UI components. For details, see the [docs](https://reactnative.dev/).
 
@@ -74,7 +80,7 @@ Disadvantages:
 * Hard to maintain since there is no single correct way of doing things.
 * Performance issue: page rendering is pretty slow.
 
-#### Ionic
+#### ** Ionic **
 
 Ionic is similar to React Native, except that it focuses on building reactive UI. For details, see the [docs](https://ionicframework.com/).
 
@@ -87,7 +93,7 @@ Disadvantages:
 
 * Limited support for tools like WebRTC and authentication services.
 
-#### Flutter
+#### ** Flutter **
 
 Flutter is also a cross-platform framework that focuses on reactive UI. For details, see the [docs](https://flutter.dev/docs).
 
@@ -105,6 +111,8 @@ Disadvantages:
 * Not so flexible since for most of the things, there is only one "best" approach.
 
 For the package support we can get from the Flutter ecosystem, see the [docs](./potential-flutter-packages-study).
+
+<!-- tabs:end -->
 
 ### Final decision
 
@@ -130,7 +138,9 @@ The interface schemas should be evaluated on:
 
 ### Candidates
 
-#### GraphQL
+<!-- tabs:start -->
+
+#### ** GraphQL **
 
 GraphQL is a query language spec developed by Facebook whose biggest feature is pushing the capability of API from server to client. For example, the server may have only one API and the client will send over both the query content and a spec of data it wants. For more details, see the [official doc](https://graphql.org/).
 
@@ -138,6 +148,7 @@ Advantages:
 
 * Flexible: features that don't change the fundamental data structure can be added without server change.
 
+> [!NOTE]
 > For example, if the app requires a list of users instead of just a single user, it doesn't need a server change, but if the definition of a user is changed, server change is required.
 
 * Universal: as of now, it's a common practice for services to expose GraphQL APIs to the public, so if we intent to integrate with 3rd party services through APIs, using GraphQL might save a shim layer.
@@ -148,7 +159,7 @@ Disadvantages:
 * Poor stability: as GraphQL encourages adding logic at the client side, developers are more prompted to perform sequential async operations on the client side which can easily turn into corrupted data if the client exit accidentally.
 * Extra data conversion: as GraphQL presents data in the format of JSON, if the client and server are in different languages, extra data parsing and integrity checking are needed.
 
-#### Protobuf + Firebase app calls
+#### ** Protobuf + Firebase app calls **
 
 Protobuf is a typed language-neutral JSON replacement introduced by Google. For details, check the [docs](https://developers.google.com/protocol-buffers/).
 
@@ -167,7 +178,7 @@ Disadvantages:
 * Higher setup cost: setting up a Protobuf interface is a non-trivial work.
 * Less flexible: since any interface change will require both server and app change.
 
-#### Protobuf + gRPC
+#### ** Protobuf + gRPC **
 
 gRPC is a remote procedure call framework developed by Google. For details, see the [docs](https://grpc.io/).
 
@@ -181,7 +192,7 @@ Disadvantages:
 
 * No out-of-box service support: basically to use gRPC, the server has to be hosted on a basic VM, not microservices platforms.
 
-#### JSON + REST
+#### ** JSON + REST **
 
 JSON + REST API is the most primative yet widely used schema.
 
@@ -194,6 +205,8 @@ Disadvantages:
 
 * Hard to change: to change interface, need to change parsing, checking and sync app and server.
 * Plus all the problems other frameworks are trying to solve.
+
+<!-- tabs:end -->
 
 <!--
   @todo List the app requirement and decide which app server interface to use
