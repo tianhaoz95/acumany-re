@@ -202,11 +202,81 @@ Write code
 
 ### Language highlighting
 
+The language highlighting is provided by [Prism](https://prismjs.com).
+
+To check all the supported languages, see [the list](https://prismjs.com/#supported-languages).
+
+To support a new language on this site, find `<!-- Language highlighting support -->` in `docs/index.html` and add the new language to the list.
+
 ### Diagrams
+
+<!-- panels:start -->
+
+<!-- div:title-panel -->
+
+Diagrams are supported with [the mermaid project](https://github.com/mermaid-js/mermaid). For more examples on how to work with mermaid, see [the mermaid docs](https://mermaid-js.github.io/mermaid/#/). Here is an simple example, the diagram blow (right side) can be generated from the code (left):
+
+<!-- div:left-panel -->
+
+```markdown
+$ 	```mermaid
+$	graph LR
+$		A --- B
+$	    B-->C[fa:fa-ban forbidden]
+$	    B-->D(fa:fa-spinner);
+$	```
+```
+
+> [!NOTE]
+> The dollar signs are there only to scape the backtick. You can safely ignore them.
+
+<!-- div:right-panel -->
+
+```mermaid
+graph LR
+	A --- B
+    B-->C[fa:fa-ban forbidden]
+    B-->D(fa:fa-spinner);
+```
+
+<!-- panels:end -->
+
+> [!NOTE]
+> The diagram support is built with the docsify mermaid plugin. For more information, check the [docs](https://github.com/Leward/mermaid-docsify).
+
+### Changelog
+
+To add new features into `CHANGELOG`, simply add entries to the top of `docs/CHANGELOG.md`.
+
+> [!NOTE]
+> The `CHANGELOG` render at the top right corner of in the docs site is built with the `CHANGELOG` plugin. For more customization, check [their documentation](https://github.com/Plugin-contrib/docsify-plugin/tree/master/packages/docsify-changelog-plugin).
 
 ### Use emoji
 
 For a full list of `markdown` emoji, check [this list](https://gist.github.com/rxaviers/7360908).
+
+### Dart/Flutter examples
+
+<!-- panels:start -->
+
+<!-- div:left-panel -->
+
+Since Flutter/Dart support compiling to Web, so it's possible to render code snippets or examples to the docs.
+
+With the following code, you can embed a Flutter/Dart example code snippet into the docs like the one shown on the right side:
+
+```markdown
+[Dart example](https://dartpad.dev/embed-inline.html?id=5d70bc1889d055c7a18d35d77874af88&split=80&theme=dark ':include :type=iframe width=100% height=400px')
+```
+
+> [!NOTE]
+> This is achieved with DartPad. For more details, see [DartPad docs](https://github.com/dart-lang/dart-pad/wiki/Embedding-Guide).
+
+<!-- div:right-panel -->
+
+[Dart example](https://dartpad.dev/embed-inline.html?id=5d70bc1889d055c7a18d35d77874af88&split=80&theme=dark ':include :type=iframe width=100% height=400px')
+
+<!-- panels:end -->
 
 ### Add page to search
 

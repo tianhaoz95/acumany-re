@@ -16,6 +16,7 @@ For now, the tech stack is going through a brainstorm session, see [here](design
 # Quick references
 
 * [Design Docs](./design-docs/README)
+* [Documentations](./documentation/README)
 
 # Getting started
 

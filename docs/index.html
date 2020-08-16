@@ -7,6 +7,13 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
+  <!-- For Darklight theme -->
+  <!-- For details, see https://docsify-darklight-theme.boopathikumar.me -->
+  <link 
+    rel="stylesheet"
+    href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css"
+    title="docsify-darklight-theme"
+    type="text/css"/>
   <!-- For GitTalk plugin -->
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk/dist/gitalk.css">
   <!-- For changelog -->
@@ -16,6 +23,31 @@
   <link
     rel="stylesheet"
     href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+  <!-- Custom style for docsify example panels -->
+  <style>
+    :root{
+      /* Document */
+      --docsify-example-panels-document-width: 90%;
+
+      /* Wrapper */
+      --docsify-example-panels-wrapper-width: 100%;
+
+      /* Standards */
+      --docsify-example-panels-padding-inner : 8px 16px;
+      --docsify-example-panels-padding-surroundings : 0px;
+
+      /* Panel Left */
+      --docsify-example-panels-left-panel-background : transparent;
+      --docsify-example-panels-left-panel-width : 36%;
+
+      /* Panel Right */
+      --docsify-example-panels-right-panel-background : transparent;
+      --docsify-example-panels-right-panel-width : 64%;
+
+      /* Titles */
+      --docsify-example-panels-title-background: transparent;
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -109,6 +141,12 @@
     }
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  <!-- For Dartlight theme -->
+  <!-- For details, see https://docsify-darklight-theme.boopathikumar.me -->
+  <script 
+    src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js"
+    type="text/javascript">
+  </script>
   <!-- Configuration for docsify sharing -->
   <!-- For details, see https://coroo.github.io/docsify-share -->
   <script src="//unpkg.com/docsify-share/build/index.min.js"></script>
@@ -162,5 +200,11 @@
   <script src="//cdn.jsdelivr.net/npm/docsify-mustache"></script>
   <!-- Configuration for changelog -->
   <script src="https://cdn.jsdelivr.net/npm/docsify-changelog-plugin@latest/dist/index.js"></script>
+  <!-- The PWA configuration -->
+  <script>
+    if (typeof navigator.serviceWorker !== 'undefined') {
+      navigator.serviceWorker.register('sw.js')
+    }
+  </script>
 </body>
 </html>
