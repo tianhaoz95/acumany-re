@@ -44,6 +44,8 @@ To view the docs in local repository, follow the [instructions](https://docsify.
 
 To modify the docs, simply create/remove/modify the `README` files in the `docs` directory and open a pull request to check in the code (no further actions are needed).
 
+For more tricks on how to write beautiful docs, see the [tutorial](./documentation/docs-howto).
+
 ### Confidential
 
 Confidential information is documented in the Wiki of the private repository, [`acumany-re-credential`](https://github.com/tianhaoz95/acumany-re-credential).
