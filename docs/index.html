@@ -173,7 +173,25 @@
   <!-- See https://github.com/Leward/mermaid-docsify for details -->
   <script src="//unpkg.com/mermaid/dist/mermaid.js"></script>
   <script src="//unpkg.com/docsify-mermaid@latest/dist/docsify-mermaid.js"></script>
-  <script>mermaid.initialize({ startOnLoad: true });</script>
+  <script>
+    // For more details on Mermaid configuration, see:
+    // https://mermaid-js.github.io/mermaid/#/Setup?id=mermaidapi-configuration-defaults
+    // However, as it is wrapped inside docsify, some of the configuration will be
+    // overwritten by the docsify global style sheet.
+    mermaid.initialize({
+      startOnLoad: true,
+      er: {
+        diagramPadding: 8,
+        entityPadding: 2,
+        fontSize: 8,
+      },
+      flowchart: {
+        diagramPadding: 4,
+        htmlLabels: true,
+        curve: 'cardinal',
+      }
+    });
+  </script>
   <!-- Configuration for example panels -->
   <!-- For details, see https://vagnerdomingues.github.io/docsify-example-panels -->
   <script src="https://cdn.jsdelivr.net/npm/docsify-example-panels@1"></script>
@@ -202,6 +220,8 @@
   <script src="https://cdn.jsdelivr.net/npm/docsify-changelog-plugin@latest/dist/index.js"></script>
   <!-- The PWA configuration -->
   <script>
+    // Should only register for modern browsers that supports
+    // offline service workers.
     if (typeof navigator.serviceWorker !== 'undefined') {
       navigator.serviceWorker.register('sw.js')
     }
