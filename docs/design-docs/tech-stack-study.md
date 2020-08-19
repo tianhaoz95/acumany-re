@@ -110,7 +110,7 @@ Disadvantages:
 * One more language to learn: Flutter uses Dart, a less known language.
 * Not so flexible since for most of the things, there is only one "best" approach.
 
-For the package support we can get from the Flutter ecosystem, see the [docs](./potential-flutter-packages-study).
+For the package support we can get from the Flutter ecosystem, see the [docs](/personal/tianhaoz95/potential-flutter-packages-study).
 
 <!-- tabs:end -->
 
