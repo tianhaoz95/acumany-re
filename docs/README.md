@@ -23,10 +23,50 @@ For now, the tech stack is going through a brainstorm session, see [here](design
 
 ## App
 
-<!--
-  @todo Add getting started guide
-  @body After the tech stack infra is done, add instructions for new developers to get started.
--->
+The app is built with Flutter. To get started with Flutter, follow the ["Getting started" instructions](https://flutter.dev/docs/get-started/install).
+
+<!-- tabs:start -->
+
+### ** Install dependencies **
+
+```bash
+cd app
+flutter pub get
+```
+
+### ** Run the app **
+
+```bash
+cd app
+flutter pub get
+flutter run
+```
+
+### ** Run unit tests **
+
+```bash
+cd app
+flutter pub get
+flutter test
+```
+
+### ** Format code **
+
+```bash
+cd app
+flutter pub get
+flutter format .
+```
+
+### ** Run static code analysis **
+
+```bash
+cd app
+flutter pub get
+flutter analyze
+```
+
+<!-- tabs:end -->
 
 ## Docs
 
