@@ -12,6 +12,9 @@ on:
 jobs:
   android-integration-test:
     name: run integration tests on Android
+    defaults:
+      run:
+        working-directory: app
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
