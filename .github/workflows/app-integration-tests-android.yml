@@ -31,6 +31,7 @@ jobs:
           flutter config --enable-web --enable-macos-desktop --enable-linux-desktop
           flutter upgrade
           flutter --version
+          flutter doctor -v
       - name: run basic tests
         run: |
           flutter pub get

@@ -30,6 +30,7 @@ jobs:
           flutter config --enable-web --enable-macos-desktop --enable-linux-desktop
           flutter upgrade
           flutter --version
+          flutter doctor -v
       - name: install Flutter dependencies
         run: flutter pub get
       - name: lint Dart code
