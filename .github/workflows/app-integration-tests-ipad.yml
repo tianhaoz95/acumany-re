@@ -31,8 +31,9 @@ jobs:
           flutter config --enable-web --enable-macos-desktop --enable-linux-desktop
           flutter upgrade
           flutter --version
-      - name: run quick Tests
+      - name: run basic Tests
         run: |
+          flutter pub get
           flutter analyze
           flutter test
       - name: list simulators
@@ -49,7 +50,5 @@ jobs:
               '$1 == device { print $2 }'
           )
           xcrun simctl boot "${UDID:?No Simulator with this name found}"
-      - name: install server dependencies
-        run: flutter pub get
-      - name: run offline device end to end test
+      - name: run integration tests
         run: flutter drive --target=test_driver/mock.dart
