@@ -45,7 +45,7 @@ jobs:
             xcrun instruments -s |
             awk \
               -F ' *[][]' \
-              -v 'device=${{ IPAD_MODEL }}' \
+              -v 'device=${{ env.IPAD_MODEL }}' \
               '$1 == device { print $2 }'
           )
           xcrun simctl boot "${UDID:?No Simulator with this name found}"
