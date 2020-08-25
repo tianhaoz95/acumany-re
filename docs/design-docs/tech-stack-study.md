@@ -43,10 +43,11 @@ Firebase is cheaper than the individual components on Google Cloud and switching
 
 ### Requirements
 
-<!--
-  @todo List the requirements of the app
-  @body List out the app's requirements when the high-level UI/UX design is available.
--->
+* Have good platform coverage
+* Easy to develop and debug
+* Easy to onboard new developers
+* Ability to go mobile first
+* Play well with potential third-party technologies like WebRTC and GraphQL
 
 ### Candidates
 
