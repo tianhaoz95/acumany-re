@@ -43,10 +43,11 @@ Firebase is cheaper than the individual components on Google Cloud and switching
 
 ### Requirements
 
-<!--
-  @todo List the requirements of the app
-  @body List out the app's requirements when the high-level UI/UX design is available.
--->
+* Have good platform coverage
+* Easy to develop and debug
+* Easy to onboard new developers
+* Ability to go mobile first
+* Play well with potential third-party technologies like WebRTC and GraphQL
 
 ### Candidates
 
@@ -116,10 +117,11 @@ For the package support we can get from the Flutter ecosystem, see the [docs](/p
 
 ### Final decision
 
-<!--
-  @todo Deciside which app framework to use
-  @body Deciside which app framework aligns better with the UI/UX design and the functionalities.
--->
+For framework it boils down to React & Flutter.
+
+Based on the research so far, Flutter seems to have a bright future.
+
+Also, it opens up more possibilities for future projects being able to build apps by using a single codebase for all platforms.
 
 ## App server interface schema
 

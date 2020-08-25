@@ -1,0 +1,39 @@
+name: App Unit Tests
+
+on:
+  push:
+    paths:
+      - 'app/*'
+  schedule:
+    - cron: '* */6 * * *'
+
+jobs:
+  test:
+    name: app unit tests on ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    defaults:
+      run:
+        working-directory: app
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macOS-latest]
+      fail-fast: false
+    steps:
+      - uses: actions/checkout@v2
+      - uses: subosito/flutter-action@v1
+        with:
+          flutter-version: "1.20.2"
+          channel: "stable"
+      - name: configure Flutter
+        run: |
+          flutter channel master
+          flutter config --enable-web --enable-macos-desktop --enable-linux-desktop
+          flutter upgrade
+          flutter --version
+          flutter doctor -v
+      - name: install Flutter dependencies
+        run: flutter pub get
+      - name: lint Dart code
+        run: flutter analyze
+      - name: run unit tests
+        run: flutter test

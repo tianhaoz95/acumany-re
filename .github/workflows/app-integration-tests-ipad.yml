@@ -1,0 +1,55 @@
+name: App Integration Tests iPad
+
+on:
+  pull_request:
+    branches:
+      - 'master'
+    paths:
+      - 'app/*'
+  schedule:
+    - cron: '* */6 * * *'
+
+jobs:
+  ipad-integration-test:
+    name: run integration tests on iPad
+    defaults:
+      run:
+        working-directory: app
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-java@v1
+        with:
+          java-version: "12.x"
+      - uses: subosito/flutter-action@v1
+        with:
+          flutter-version: "1.20.2"
+          channel: "stable"
+      - name: configure Flutter
+        run: |
+          flutter channel master
+          flutter config --enable-web --enable-macos-desktop --enable-linux-desktop
+          flutter upgrade
+          flutter --version
+          flutter doctor -v
+      - name: run basic tests
+        run: |
+          flutter pub get
+          flutter analyze
+          flutter test
+      - name: list simulators
+        run: xcrun instruments -s
+      - name: start simulator
+        env:
+          IPAD_MODEL: 'iPad Pro (12.9-inch) (4th generation) (13.6)'
+        run: |
+          UDID=$(
+            xcrun instruments -s |
+            awk \
+              -F ' *[][]' \
+              -v 'device=${{ env.IPAD_MODEL }}' \
+              '$1 == device { print $2 }'
+          )
+          xcrun simctl boot "${UDID:?No Simulator with this name found}"
+      - name: run integration tests
+        run: flutter drive --target=test_driver/mock.dart
