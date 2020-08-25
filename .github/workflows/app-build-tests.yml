@@ -40,6 +40,7 @@ jobs:
           flutter config --enable-web --enable-macos-desktop --enable-linux-desktop
           flutter upgrade
           flutter --version
+          flutter doctor -v
           flutter devices
       - name: build Linux
         run: flutter build linux
