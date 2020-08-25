@@ -46,4 +46,4 @@ jobs:
             /Users/runner/Library/Android/sdk/tools/bin/avdmanager list
             sleep 20
             flutter doctor -v
-            cd ./app && flutter drive --target=test_driver/app.dart
+            cd ./app && flutter drive --target=test_driver/mock.dart
