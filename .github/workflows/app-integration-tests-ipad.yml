@@ -11,7 +11,7 @@ on:
 
 jobs:
   ipad-integration-test:
-    name: run integration test on iPad
+    name: run integration tests on iPad
     defaults:
       run:
         working-directory: app
@@ -31,7 +31,7 @@ jobs:
           flutter config --enable-web --enable-macos-desktop --enable-linux-desktop
           flutter upgrade
           flutter --version
-      - name: run basic Tests
+      - name: run basic tests
         run: |
           flutter pub get
           flutter analyze
