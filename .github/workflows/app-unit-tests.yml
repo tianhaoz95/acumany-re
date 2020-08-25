@@ -4,11 +4,6 @@ on:
   push:
     paths:
       - 'app/*'
-  pull_request:
-    branches:
-      - 'master'
-    paths:
-      - 'app/*'
   schedule:
     - cron: '* */6 * * *'
 
@@ -32,7 +27,7 @@ jobs:
       - name: upgrade Flutter
         run: |
           flutter channel master
-          flutter config --enable-web
+          flutter config --enable-web --enable-macos-desktop --enable-linux-desktop
           flutter upgrade
           flutter --version
       - name: install Flutter dependencies
