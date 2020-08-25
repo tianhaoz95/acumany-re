@@ -116,10 +116,11 @@ For the package support we can get from the Flutter ecosystem, see the [docs](/p
 
 ### Final decision
 
-<!--
-  @todo Deciside which app framework to use
-  @body Deciside which app framework aligns better with the UI/UX design and the functionalities.
--->
+For framework it boils down to React & Flutter.
+
+Based on the research so far, Flutter seems to have a bright future.
+
+Also, it opens up more possibilities for future projects being able to build apps by using a single codebase for all platforms.
 
 ## App server interface schema
 
