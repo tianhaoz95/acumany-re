@@ -25,7 +25,7 @@ jobs:
         with:
           flutter-version: "1.20.2"
           channel: "stable"
-      - name: upgrade Flutter
+      - name: configure Flutter
         run: |
           flutter channel master
           flutter config --enable-web --enable-macos-desktop --enable-linux-desktop
